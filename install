@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo -n "Install SendEmail..."
+
+if [ ! -d /opt/sendemail ];then
+	mkdir /opt/sendemail
+fi
+
+if [ ! -d /opt/sendemail/bin ];then
+	mkdir /opt/sendemail/bin
+fi
+
+install sendemail.sh    /opt/sendemail
+install bin/sendEmail   /opt/sendemail/bin
+
+echo "Done"
+
+
